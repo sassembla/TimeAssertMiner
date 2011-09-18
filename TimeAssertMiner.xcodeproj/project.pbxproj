@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13B404BB1426BB1500EF02D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B404BA1426BB1500EF02D2 /* Cocoa.framework */; };
+		13B404C51426BB1500EF02D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13B404C31426BB1500EF02D2 /* InfoPlist.strings */; };
+		13B404C71426BB1500EF02D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B404C61426BB1500EF02D2 /* main.m */; };
+		13B404CB1426BB1500EF02D2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 13B404C91426BB1500EF02D2 /* Credits.rtf */; };
+		13B404CE1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B404CD1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.m */; };
+		13B404D11426BB1600EF02D2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B404CF1426BB1600EF02D2 /* MainMenu.xib */; };
+		13B404D91426BB1600EF02D2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B404D81426BB1600EF02D2 /* SenTestingKit.framework */; };
+		13B404DA1426BB1600EF02D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B404BA1426BB1500EF02D2 /* Cocoa.framework */; };
+		13B404E21426BB1600EF02D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13B404E01426BB1600EF02D2 /* InfoPlist.strings */; };
+		13B404E41426BB1600EF02D2 /* TimeAssertMinerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 13B404E31426BB1600EF02D2 /* TimeAssertMinerTests.h */; };
+		13B404E61426BB1600EF02D2 /* TimeAssertMinerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B404E51426BB1600EF02D2 /* TimeAssertMinerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13B404DB1426BB1600EF02D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13B404AD1426BB1500EF02D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B404B51426BB1500EF02D2;
+			remoteInfo = TimeAssertMiner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13B404B61426BB1500EF02D2 /* TimeAssertMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAssertMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B404BA1426BB1500EF02D2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		13B404BD1426BB1500EF02D2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		13B404BE1426BB1500EF02D2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		13B404BF1426BB1500EF02D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		13B404C21426BB1500EF02D2 /* TimeAssertMiner-Info.plist */ = {isa = PBXFileReference; path = "TimeAssertMiner-Info.plist"; sourceTree = "<group>"; };
+		13B404C41426BB1500EF02D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13B404C61426BB1500EF02D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13B404C81426BB1500EF02D2 /* TimeAssertMiner-Prefix.pch */ = {isa = PBXFileReference; path = "TimeAssertMiner-Prefix.pch"; sourceTree = "<group>"; };
+		13B404CA1426BB1500EF02D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		13B404CC1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.h */ = {isa = PBXFileReference; path = TimeAssertMinerAppDelegate.h; sourceTree = "<group>"; };
+		13B404CD1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeAssertMinerAppDelegate.m; sourceTree = "<group>"; };
+		13B404D01426BB1600EF02D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		13B404D71426BB1600EF02D2 /* TimeAssertMinerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeAssertMinerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B404D81426BB1600EF02D2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		13B404DF1426BB1600EF02D2 /* TimeAssertMinerTests-Info.plist */ = {isa = PBXFileReference; path = "TimeAssertMinerTests-Info.plist"; sourceTree = "<group>"; };
+		13B404E11426BB1600EF02D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13B404E31426BB1600EF02D2 /* TimeAssertMinerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeAssertMinerTests.h; sourceTree = "<group>"; };
+		13B404E51426BB1600EF02D2 /* TimeAssertMinerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeAssertMinerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13B404B31426BB1500EF02D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B404BB1426BB1500EF02D2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B404D31426BB1600EF02D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B404D91426BB1600EF02D2 /* SenTestingKit.framework in Frameworks */,
+				13B404DA1426BB1600EF02D2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13B404AB1426BB1500EF02D2 = {
+			isa = PBXGroup;
+			children = (
+				13B404C01426BB1500EF02D2 /* TimeAssertMiner */,
+				13B404DD1426BB1600EF02D2 /* TimeAssertMinerTests */,
+				13B404B91426BB1500EF02D2 /* Frameworks */,
+				13B404B71426BB1500EF02D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13B404B71426BB1500EF02D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B404B61426BB1500EF02D2 /* TimeAssertMiner.app */,
+				13B404D71426BB1600EF02D2 /* TimeAssertMinerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13B404B91426BB1500EF02D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13B404BA1426BB1500EF02D2 /* Cocoa.framework */,
+				13B404D81426BB1600EF02D2 /* SenTestingKit.framework */,
+				13B404BC1426BB1500EF02D2 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13B404BC1426BB1500EF02D2 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13B404BD1426BB1500EF02D2 /* AppKit.framework */,
+				13B404BE1426BB1500EF02D2 /* CoreData.framework */,
+				13B404BF1426BB1500EF02D2 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		13B404C01426BB1500EF02D2 /* TimeAssertMiner */ = {
+			isa = PBXGroup;
+			children = (
+				13B404CC1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.h */,
+				13B404CD1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.m */,
+				13B404CF1426BB1600EF02D2 /* MainMenu.xib */,
+				13B404C11426BB1500EF02D2 /* Supporting Files */,
+			);
+			path = TimeAssertMiner;
+			sourceTree = "<group>";
+		};
+		13B404C11426BB1500EF02D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13B404C21426BB1500EF02D2 /* TimeAssertMiner-Info.plist */,
+				13B404C31426BB1500EF02D2 /* InfoPlist.strings */,
+				13B404C61426BB1500EF02D2 /* main.m */,
+				13B404C81426BB1500EF02D2 /* TimeAssertMiner-Prefix.pch */,
+				13B404C91426BB1500EF02D2 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B404DD1426BB1600EF02D2 /* TimeAssertMinerTests */ = {
+			isa = PBXGroup;
+			children = (
+				13B404E31426BB1600EF02D2 /* TimeAssertMinerTests.h */,
+				13B404E51426BB1600EF02D2 /* TimeAssertMinerTests.m */,
+				13B404DE1426BB1600EF02D2 /* Supporting Files */,
+			);
+			path = TimeAssertMinerTests;
+			sourceTree = "<group>";
+		};
+		13B404DE1426BB1600EF02D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13B404DF1426BB1600EF02D2 /* TimeAssertMinerTests-Info.plist */,
+				13B404E01426BB1600EF02D2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13B404B51426BB1500EF02D2 /* TimeAssertMiner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B404E91426BB1600EF02D2 /* Build configuration list for PBXNativeTarget "TimeAssertMiner" */;
+			buildPhases = (
+				13B404B21426BB1500EF02D2 /* Sources */,
+				13B404B31426BB1500EF02D2 /* Frameworks */,
+				13B404B41426BB1500EF02D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeAssertMiner;
+			productName = TimeAssertMiner;
+			productReference = 13B404B61426BB1500EF02D2 /* TimeAssertMiner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13B404D61426BB1600EF02D2 /* TimeAssertMinerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B404EC1426BB1600EF02D2 /* Build configuration list for PBXNativeTarget "TimeAssertMinerTests" */;
+			buildPhases = (
+				13B404D21426BB1600EF02D2 /* Sources */,
+				13B404D31426BB1600EF02D2 /* Frameworks */,
+				13B404D41426BB1600EF02D2 /* Resources */,
+				13B404D51426BB1600EF02D2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13B404DC1426BB1600EF02D2 /* PBXTargetDependency */,
+			);
+			name = TimeAssertMinerTests;
+			productName = TimeAssertMinerTests;
+			productReference = 13B404D71426BB1600EF02D2 /* TimeAssertMinerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13B404AD1426BB1500EF02D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = KISSAKI;
+			};
+			buildConfigurationList = 13B404B01426BB1500EF02D2 /* Build configuration list for PBXProject "TimeAssertMiner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 13B404AB1426BB1500EF02D2;
+			productRefGroup = 13B404B71426BB1500EF02D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B404B51426BB1500EF02D2 /* TimeAssertMiner */,
+				13B404D61426BB1600EF02D2 /* TimeAssertMinerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13B404B41426BB1500EF02D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B404C51426BB1500EF02D2 /* InfoPlist.strings in Resources */,
+				13B404CB1426BB1500EF02D2 /* Credits.rtf in Resources */,
+				13B404D11426BB1600EF02D2 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B404D41426BB1600EF02D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B404E21426BB1600EF02D2 /* InfoPlist.strings in Resources */,
+				13B404E41426BB1600EF02D2 /* TimeAssertMinerTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13B404D51426BB1600EF02D2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B404B21426BB1500EF02D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B404C71426BB1500EF02D2 /* main.m in Sources */,
+				13B404CE1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B404D21426BB1600EF02D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B404E61426BB1600EF02D2 /* TimeAssertMinerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13B404DC1426BB1600EF02D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B404B51426BB1500EF02D2 /* TimeAssertMiner */;
+			targetProxy = 13B404DB1426BB1600EF02D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13B404C31426BB1500EF02D2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B404C41426BB1500EF02D2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		13B404C91426BB1500EF02D2 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B404CA1426BB1500EF02D2 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		13B404CF1426BB1600EF02D2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B404D01426BB1600EF02D2 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		13B404E01426BB1600EF02D2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B404E11426BB1600EF02D2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13B404E71426BB1600EF02D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		13B404E81426BB1600EF02D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		13B404EA1426BB1600EF02D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeAssertMiner/TimeAssertMiner-Prefix.pch";
+				INFOPLIST_FILE = "TimeAssertMiner/TimeAssertMiner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		13B404EB1426BB1600EF02D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeAssertMiner/TimeAssertMiner-Prefix.pch";
+				INFOPLIST_FILE = "TimeAssertMiner/TimeAssertMiner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		13B404ED1426BB1600EF02D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TimeAssertMiner.app/Contents/MacOS/TimeAssertMiner";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeAssertMiner/TimeAssertMiner-Prefix.pch";
+				INFOPLIST_FILE = "TimeAssertMinerTests/TimeAssertMinerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		13B404EE1426BB1600EF02D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TimeAssertMiner.app/Contents/MacOS/TimeAssertMiner";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeAssertMiner/TimeAssertMiner-Prefix.pch";
+				INFOPLIST_FILE = "TimeAssertMinerTests/TimeAssertMinerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13B404B01426BB1500EF02D2 /* Build configuration list for PBXProject "TimeAssertMiner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B404E71426BB1600EF02D2 /* Debug */,
+				13B404E81426BB1600EF02D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B404E91426BB1600EF02D2 /* Build configuration list for PBXNativeTarget "TimeAssertMiner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B404EA1426BB1600EF02D2 /* Debug */,
+				13B404EB1426BB1600EF02D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		13B404EC1426BB1600EF02D2 /* Build configuration list for PBXNativeTarget "TimeAssertMinerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B404ED1426BB1600EF02D2 /* Debug */,
+				13B404EE1426BB1600EF02D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13B404AD1426BB1500EF02D2 /* Project object */;
+}
