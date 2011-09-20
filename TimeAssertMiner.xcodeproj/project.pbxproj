@@ -18,6 +18,12 @@
 		13B404E21426BB1600EF02D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13B404E01426BB1600EF02D2 /* InfoPlist.strings */; };
 		13B404E41426BB1600EF02D2 /* TimeAssertMinerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 13B404E31426BB1600EF02D2 /* TimeAssertMinerTests.h */; };
 		13B404E61426BB1600EF02D2 /* TimeAssertMinerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B404E51426BB1600EF02D2 /* TimeAssertMinerTests.m */; };
+		13B405061426BBB600EF02D2 /* TimeMine.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B405051426BBB600EF02D2 /* TimeMine.m */; };
+		13B405241426BD6600EF02D2 /* MessengerIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B405211426BD6600EF02D2 /* MessengerIDGenerator.m */; };
+		13B405251426BD6600EF02D2 /* MessengerSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B405231426BD6600EF02D2 /* MessengerSystem.m */; };
+		13B4052D1426F3D400EF02D2 /* SmallControllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B4052B1426F3D400EF02D2 /* SmallControllViewController.m */; };
+		13B4052E1426F3D400EF02D2 /* SmallControllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B4052C1426F3D400EF02D2 /* SmallControllViewController.xib */; };
+		13B4058E14271BD900EF02D2 /* SmallControllView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B4058D14271BD900EF02D2 /* SmallControllView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,20 +42,32 @@
 		13B404BD1426BB1500EF02D2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		13B404BE1426BB1500EF02D2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		13B404BF1426BB1500EF02D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		13B404C21426BB1500EF02D2 /* TimeAssertMiner-Info.plist */ = {isa = PBXFileReference; path = "TimeAssertMiner-Info.plist"; sourceTree = "<group>"; };
+		13B404C21426BB1500EF02D2 /* TimeAssertMiner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeAssertMiner-Info.plist"; sourceTree = "<group>"; };
 		13B404C41426BB1500EF02D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13B404C61426BB1500EF02D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		13B404C81426BB1500EF02D2 /* TimeAssertMiner-Prefix.pch */ = {isa = PBXFileReference; path = "TimeAssertMiner-Prefix.pch"; sourceTree = "<group>"; };
+		13B404C81426BB1500EF02D2 /* TimeAssertMiner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeAssertMiner-Prefix.pch"; sourceTree = "<group>"; };
 		13B404CA1426BB1500EF02D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		13B404CC1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.h */ = {isa = PBXFileReference; path = TimeAssertMinerAppDelegate.h; sourceTree = "<group>"; };
+		13B404CC1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeAssertMinerAppDelegate.h; sourceTree = "<group>"; };
 		13B404CD1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeAssertMinerAppDelegate.m; sourceTree = "<group>"; };
 		13B404D01426BB1600EF02D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		13B404D71426BB1600EF02D2 /* TimeAssertMinerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeAssertMinerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B404D81426BB1600EF02D2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		13B404DF1426BB1600EF02D2 /* TimeAssertMinerTests-Info.plist */ = {isa = PBXFileReference; path = "TimeAssertMinerTests-Info.plist"; sourceTree = "<group>"; };
+		13B404DF1426BB1600EF02D2 /* TimeAssertMinerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeAssertMinerTests-Info.plist"; sourceTree = "<group>"; };
 		13B404E11426BB1600EF02D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13B404E31426BB1600EF02D2 /* TimeAssertMinerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeAssertMinerTests.h; sourceTree = "<group>"; };
 		13B404E51426BB1600EF02D2 /* TimeAssertMinerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeAssertMinerTests.m; sourceTree = "<group>"; };
+		13B405041426BBB600EF02D2 /* TimeMine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeMine.h; sourceTree = "<group>"; };
+		13B405051426BBB600EF02D2 /* TimeMine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeMine.m; sourceTree = "<group>"; };
+		13B405201426BD6600EF02D2 /* MessengerIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessengerIDGenerator.h; sourceTree = "<group>"; };
+		13B405211426BD6600EF02D2 /* MessengerIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessengerIDGenerator.m; sourceTree = "<group>"; };
+		13B405221426BD6600EF02D2 /* MessengerSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessengerSystem.h; sourceTree = "<group>"; };
+		13B405231426BD6600EF02D2 /* MessengerSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessengerSystem.m; sourceTree = "<group>"; };
+		13B4052A1426F3D400EF02D2 /* SmallControllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallControllViewController.h; sourceTree = "<group>"; };
+		13B4052B1426F3D400EF02D2 /* SmallControllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallControllViewController.m; sourceTree = "<group>"; };
+		13B4052C1426F3D400EF02D2 /* SmallControllViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallControllViewController.xib; sourceTree = "<group>"; };
+		13B4052F1426F5AE00EF02D2 /* TimeAssertMinerConstSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAssertMinerConstSetting.h; sourceTree = "<group>"; };
+		13B4058C14271BD900EF02D2 /* SmallControllView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallControllView.h; sourceTree = "<group>"; };
+		13B4058D14271BD900EF02D2 /* SmallControllView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallControllView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +133,13 @@
 		13B404C01426BB1500EF02D2 /* TimeAssertMiner */ = {
 			isa = PBXGroup;
 			children = (
+				13B4058F14271D6700EF02D2 /* SmallControllView */,
+				13B404EF1426BB4400EF02D2 /* Support */,
 				13B404CC1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.h */,
 				13B404CD1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.m */,
 				13B404CF1426BB1600EF02D2 /* MainMenu.xib */,
 				13B404C11426BB1500EF02D2 /* Supporting Files */,
+				13B4052F1426F5AE00EF02D2 /* TimeAssertMinerConstSetting.h */,
 			);
 			path = TimeAssertMiner;
 			sourceTree = "<group>";
@@ -152,6 +173,47 @@
 				13B404E01426BB1600EF02D2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B404EF1426BB4400EF02D2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				13B4051F1426BD6600EF02D2 /* MessengerSystem */,
+				13B405031426BBA300EF02D2 /* TimeMine */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		13B405031426BBA300EF02D2 /* TimeMine */ = {
+			isa = PBXGroup;
+			children = (
+				13B405041426BBB600EF02D2 /* TimeMine.h */,
+				13B405051426BBB600EF02D2 /* TimeMine.m */,
+			);
+			name = TimeMine;
+			sourceTree = "<group>";
+		};
+		13B4051F1426BD6600EF02D2 /* MessengerSystem */ = {
+			isa = PBXGroup;
+			children = (
+				13B405201426BD6600EF02D2 /* MessengerIDGenerator.h */,
+				13B405211426BD6600EF02D2 /* MessengerIDGenerator.m */,
+				13B405221426BD6600EF02D2 /* MessengerSystem.h */,
+				13B405231426BD6600EF02D2 /* MessengerSystem.m */,
+			);
+			path = MessengerSystem;
+			sourceTree = "<group>";
+		};
+		13B4058F14271D6700EF02D2 /* SmallControllView */ = {
+			isa = PBXGroup;
+			children = (
+				13B4052A1426F3D400EF02D2 /* SmallControllViewController.h */,
+				13B4052B1426F3D400EF02D2 /* SmallControllViewController.m */,
+				13B4052C1426F3D400EF02D2 /* SmallControllViewController.xib */,
+				13B4058C14271BD900EF02D2 /* SmallControllView.h */,
+				13B4058D14271BD900EF02D2 /* SmallControllView.m */,
+			);
+			name = SmallControllView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +289,7 @@
 				13B404C51426BB1500EF02D2 /* InfoPlist.strings in Resources */,
 				13B404CB1426BB1500EF02D2 /* Credits.rtf in Resources */,
 				13B404D11426BB1600EF02D2 /* MainMenu.xib in Resources */,
+				13B4052E1426F3D400EF02D2 /* SmallControllViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +327,11 @@
 			files = (
 				13B404C71426BB1500EF02D2 /* main.m in Sources */,
 				13B404CE1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.m in Sources */,
+				13B405061426BBB600EF02D2 /* TimeMine.m in Sources */,
+				13B405241426BD6600EF02D2 /* MessengerIDGenerator.m in Sources */,
+				13B405251426BD6600EF02D2 /* MessengerSystem.m in Sources */,
+				13B4052D1426F3D400EF02D2 /* SmallControllViewController.m in Sources */,
+				13B4058E14271BD900EF02D2 /* SmallControllView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

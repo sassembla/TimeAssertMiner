@@ -7,6 +7,7 @@
 //
 
 #import "TimeAssertMinerTests.h"
+#import "TimeMine.h"
 
 @implementation TimeAssertMinerTests
 
@@ -24,9 +25,15 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testTime
 {
-    STFail(@"Unit tests are not implemented yet in TimeAssertMinerTests");
+    NSString * time = [TimeMine time:[NSDate date]];
+    STAssertEqualObjects([@"11/09/19 07:16:17" length], [time length], @"一緒ではない    %@", time);
+}
+
+- (void) testlocalizedTime {
+    NSString * date = [TimeMine localizedTime];
+     STAssertEqualObjects([@"11/09/19 07:16:17" length], [date length], @"一緒ではない    %@", date);
 }
 
 @end

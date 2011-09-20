@@ -1,5 +1,5 @@
 //
-//  TimeAssertMinerAppDelegate.h
+//  SmallControllView.h
 //  TimeAssertMiner
 //
 //  Created by 徹 井上 on 11/09/19.
@@ -8,15 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MessengerSystem.h"
-
-
-
-@interface TimeAssertMinerAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
-    
+@interface SmallControllView : NSView
+{
     MessengerSystem * messenger;
-    
 }
-@property (assign) IBOutlet NSWindow *window;
-
 @end
