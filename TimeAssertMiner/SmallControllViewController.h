@@ -19,11 +19,15 @@
     IBOutlet NSTextFieldCell *nowTimeDistance;
     IBOutlet NSTextFieldCell *TimeText;
     IBOutlet NSTextFieldCell *justCopiedText;
+    IBOutlet NSButton *languageCell;
+    
+    IBOutlet NSTextFieldCell *timeAssertTextBase;
+    NSDictionary * languageDict;
 }
 
 - (NSString * ) timeAssertText:(NSString * )time withLimit:(NSString * )timeLimitStr withMessage:(NSString * )message byType:(int)currentMode;
 
-- (IBAction)ClockIndicator:(id)sender;
-
+- (IBAction)clockIndicatorChanged:(id)sender;
+- (IBAction)languageTapped:(id)sender;
 
 @end

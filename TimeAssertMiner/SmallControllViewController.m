@@ -15,6 +15,7 @@
 
 @implementation SmallControllViewController
 
+int currentLanguage = 0;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -23,11 +24,18 @@
         [messenger inputParent:MASTER_DELEGATE];
         
         [messenger callMyself:@"repeat",nil];
+        languageDict = [[NSDictionary alloc]initWithObjectsAndKeys:
+                        @"Objective-C", [NSString stringWithFormat:@"%d", OBJECTIVE_C],
+                        @"GWT", [NSString stringWithFormat:@"%d", GWT],
+                        nil];
     }
     
     return self;
 }
-
+- (void) loadView {
+    [super loadView];
+    languageCell.title = [languageDict valueForKey:[NSString stringWithFormat:@"%d", currentLanguage]];
+}
 
 - (void) receiver:(NSNotification * )notif {
     NSString * exec = [messenger getExecFromNortification:notif];
@@ -43,7 +51,7 @@
         [justCopiedText setTextColor:[NSColor colorWithSRGBRed:0.25 green:0.25 blue:0.25 alpha:0.8]];
         
         NSString * message = @"";//空欄
-        NSString * pasteMessage = [self timeAssertText:[TimeMine localizedTime] withLimit:nowTimeDistance.title withMessage:message byType:0];
+        NSString * pasteMessage = [self timeAssertText:[TimeMine localizedTime] withLimit:nowTimeDistance.title withMessage:message byType:currentLanguage];
         
         
         NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
@@ -89,26 +97,47 @@
     if ([exec isEqualToString:@"uped"]) {
         [messenger callMyself:@"pasteToBoard", nil];
     }
+    
+    if ([exec isEqualToString:@"languageChanged"]) {
+        [self timeAssertText:@"" withLimit:@"" withMessage:@"" byType:currentLanguage];
+    }
 }
 
 
 - (NSString * ) timeAssertText:(NSString * )time withLimit:(NSString * )timeLimitStr withMessage:(NSString * )message byType:(int)currentMode {
     switch (currentMode) {
-        case MODE_ObjectiveC:
+        case MODE_ObjectiveC:{
+            [[nowTimeDescription controlView] setFrame:CGRectMake(187, 48, [[nowTimeDescription controlView] frame].size.width, [[nowTimeDescription controlView] frame].size.height)];
+            [[nowTimeDistance controlView] setFrame:CGRectMake(185, 34, [[nowTimeDistance controlView] frame].size.width, [[nowTimeDistance controlView] frame].size.height)];
+            
+            timeAssertTextBase.title = @"[TimeMine \n    setTimeMineLocalizedFormat:\n                             withLimitSec:\n                           withComment:@\"\"\n];";
+            
             return [NSString stringWithFormat:@"[TimeMine setTimeMineLocalizedFormat:@\"%@\" withLimitSec:%@ withComment:@\"%@\"];//%@", 
                     time, 
                     timeLimitStr, 
                     message, 
                     [MessengerIDGenerator getMID]];
-
+        }
             
-        case MODE_GWT:
+        case MODE_GWT:{
+            [[nowTimeDescription controlView] setFrame:CGRectMake(50, 48, [[nowTimeDescription controlView] frame].size.width, [[nowTimeDescription controlView] frame].size.height)];
+            [[nowTimeDistance controlView] setFrame:CGRectMake(50, 34, [[nowTimeDistance controlView] frame].size.width, [[nowTimeDistance controlView] frame].size.height)];
+            
+            
+            int num = (int)[nowTimeDistance.title length];
+            NSMutableString * addSpace = [[NSMutableString alloc]init];
+            
+            for (int i = 0; i < num; i++) {
+                [addSpace appendString:@"  "];
+            }
+            timeAssertTextBase.title = [NSString stringWithFormat:@"debug.timeAssert(\n                                          ,\n           %@,\n           \"\"\n);", addSpace];
+            
             return [NSString stringWithFormat:@"debug.timeAssert(\"%@\", %@, \"%@\");//%@", 
                     time, 
                     timeLimitStr, 
                     message, 
                     [MessengerIDGenerator getMID]];
-
+        }
             
         default:
             return nil;
@@ -116,7 +145,7 @@
 }
 
 
-- (IBAction)ClockIndicator:(id)sender {
+- (IBAction)clockIndicatorChanged:(id)sender {
     NSSlider * senderNSSlider = sender;
     int timeCount = [senderNSSlider intValue];
     
@@ -161,7 +190,17 @@
     
     [TimeText setTitle:[NSString stringWithFormat:@"%d, %dmin, %dhour, %dday", time, time/60, time/(60*60), time/(60*60*24)]];
     [nowTimeDistance setIntValue:time];
+    
+    [messenger callMyself:@"getModeThenPaste", nil];
 }
+
+- (IBAction)languageTapped:(id)sender {
+    currentLanguage = (currentLanguage+1)%NUM_OF_LANGUAGE;
+    
+    languageCell.title = [languageDict valueForKey:[NSString stringWithFormat:@"%d", currentLanguage]];
+    [messenger callMyself:@"languageChanged", nil];
+}
+
 
 
 

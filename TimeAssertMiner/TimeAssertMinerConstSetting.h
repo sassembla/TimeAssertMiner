@@ -6,6 +6,12 @@
 //  Copyright 2011年 KISSAKI. All rights reserved.
 //
 
+enum LANGUAGES {
+    OBJECTIVE_C = 0,
+    GWT,
+    NUM_OF_LANGUAGE  
+};
+
 #define MASTER_DELEGATE @"MASTER_DELEGATE"
 #define VIEW_CONT @"VIEW_CONT"
 #define VIEW    @"VIEW"
