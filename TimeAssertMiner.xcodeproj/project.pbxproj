@@ -23,7 +23,11 @@
 		13B405251426BD6600EF02D2 /* MessengerSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B405231426BD6600EF02D2 /* MessengerSystem.m */; };
 		13B4052D1426F3D400EF02D2 /* SmallControllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B4052B1426F3D400EF02D2 /* SmallControllViewController.m */; };
 		13B4052E1426F3D400EF02D2 /* SmallControllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B4052C1426F3D400EF02D2 /* SmallControllViewController.xib */; };
-		13B4058E14271BD900EF02D2 /* SmallControllView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B4058D14271BD900EF02D2 /* SmallControllView.m */; };
+		13B4058E14271BD900EF02D2 /* TouchDetectionViewInterfaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B4058D14271BD900EF02D2 /* TouchDetectionViewInterfaceObject.m */; };
+		13ED19E014296EFF006B5B85 /* PointedWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13ED19DF14296EFF006B5B85 /* PointedWindowController.m */; };
+		13ED19E3142970F1006B5B85 /* PointedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13ED19E2142970F1006B5B85 /* PointedView.m */; };
+		13ED19EB14299AC6006B5B85 /* scr3.png in Resources */ = {isa = PBXBuildFile; fileRef = 13ED19EA14299AC6006B5B85 /* scr3.png */; };
+		13ED1A00142A4BE1006B5B85 /* TabViewInterfaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 13ED19FF142A4BE1006B5B85 /* TabViewInterfaceObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +70,15 @@
 		13B4052B1426F3D400EF02D2 /* SmallControllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallControllViewController.m; sourceTree = "<group>"; };
 		13B4052C1426F3D400EF02D2 /* SmallControllViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallControllViewController.xib; sourceTree = "<group>"; };
 		13B4052F1426F5AE00EF02D2 /* TimeAssertMinerConstSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAssertMinerConstSetting.h; sourceTree = "<group>"; };
-		13B4058C14271BD900EF02D2 /* SmallControllView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallControllView.h; sourceTree = "<group>"; };
-		13B4058D14271BD900EF02D2 /* SmallControllView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallControllView.m; sourceTree = "<group>"; };
+		13B4058C14271BD900EF02D2 /* TouchDetectionViewInterfaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchDetectionViewInterfaceObject.h; sourceTree = "<group>"; };
+		13B4058D14271BD900EF02D2 /* TouchDetectionViewInterfaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDetectionViewInterfaceObject.m; sourceTree = "<group>"; };
+		13ED19DE14296EFF006B5B85 /* PointedWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointedWindowController.h; sourceTree = "<group>"; };
+		13ED19DF14296EFF006B5B85 /* PointedWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointedWindowController.m; sourceTree = "<group>"; };
+		13ED19E1142970F1006B5B85 /* PointedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointedView.h; sourceTree = "<group>"; };
+		13ED19E2142970F1006B5B85 /* PointedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointedView.m; sourceTree = "<group>"; };
+		13ED19EA14299AC6006B5B85 /* scr3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scr3.png; sourceTree = "<group>"; };
+		13ED19FE142A4BE1006B5B85 /* TabViewInterfaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewInterfaceObject.h; sourceTree = "<group>"; };
+		13ED19FF142A4BE1006B5B85 /* TabViewInterfaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewInterfaceObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +144,8 @@
 		13B404C01426BB1500EF02D2 /* TimeAssertMiner */ = {
 			isa = PBXGroup;
 			children = (
+				13ED19EA14299AC6006B5B85 /* scr3.png */,
+				13ED19F8142A10C2006B5B85 /* TargetPointWindowControl */,
 				13B4058F14271D6700EF02D2 /* SmallControllView */,
 				13B404EF1426BB4400EF02D2 /* Support */,
 				13B404CC1426BB1500EF02D2 /* TimeAssertMinerAppDelegate.h */,
@@ -207,13 +220,42 @@
 		13B4058F14271D6700EF02D2 /* SmallControllView */ = {
 			isa = PBXGroup;
 			children = (
+				13ED1A01142A54B6006B5B85 /* TouchDetectionViewInterfaceObject */,
+				13ED19FD142A4B96006B5B85 /* TabViewInterface */,
 				13B4052A1426F3D400EF02D2 /* SmallControllViewController.h */,
 				13B4052B1426F3D400EF02D2 /* SmallControllViewController.m */,
 				13B4052C1426F3D400EF02D2 /* SmallControllViewController.xib */,
-				13B4058C14271BD900EF02D2 /* SmallControllView.h */,
-				13B4058D14271BD900EF02D2 /* SmallControllView.m */,
 			);
 			name = SmallControllView;
+			sourceTree = "<group>";
+		};
+		13ED19F8142A10C2006B5B85 /* TargetPointWindowControl */ = {
+			isa = PBXGroup;
+			children = (
+				13ED19DE14296EFF006B5B85 /* PointedWindowController.h */,
+				13ED19DF14296EFF006B5B85 /* PointedWindowController.m */,
+				13ED19E1142970F1006B5B85 /* PointedView.h */,
+				13ED19E2142970F1006B5B85 /* PointedView.m */,
+			);
+			name = TargetPointWindowControl;
+			sourceTree = "<group>";
+		};
+		13ED19FD142A4B96006B5B85 /* TabViewInterface */ = {
+			isa = PBXGroup;
+			children = (
+				13ED19FE142A4BE1006B5B85 /* TabViewInterfaceObject.h */,
+				13ED19FF142A4BE1006B5B85 /* TabViewInterfaceObject.m */,
+			);
+			name = TabViewInterface;
+			sourceTree = "<group>";
+		};
+		13ED1A01142A54B6006B5B85 /* TouchDetectionViewInterfaceObject */ = {
+			isa = PBXGroup;
+			children = (
+				13B4058C14271BD900EF02D2 /* TouchDetectionViewInterfaceObject.h */,
+				13B4058D14271BD900EF02D2 /* TouchDetectionViewInterfaceObject.m */,
+			);
+			name = TouchDetectionViewInterfaceObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +332,7 @@
 				13B404CB1426BB1500EF02D2 /* Credits.rtf in Resources */,
 				13B404D11426BB1600EF02D2 /* MainMenu.xib in Resources */,
 				13B4052E1426F3D400EF02D2 /* SmallControllViewController.xib in Resources */,
+				13ED19EB14299AC6006B5B85 /* scr3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +374,10 @@
 				13B405241426BD6600EF02D2 /* MessengerIDGenerator.m in Sources */,
 				13B405251426BD6600EF02D2 /* MessengerSystem.m in Sources */,
 				13B4052D1426F3D400EF02D2 /* SmallControllViewController.m in Sources */,
-				13B4058E14271BD900EF02D2 /* SmallControllView.m in Sources */,
+				13B4058E14271BD900EF02D2 /* TouchDetectionViewInterfaceObject.m in Sources */,
+				13ED19E014296EFF006B5B85 /* PointedWindowController.m in Sources */,
+				13ED19E3142970F1006B5B85 /* PointedView.m in Sources */,
+				13ED1A00142A4BE1006B5B85 /* TabViewInterfaceObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +549,7 @@
 				13B404EB1426BB1600EF02D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13B404EC1426BB1600EF02D2 /* Build configuration list for PBXNativeTarget "TimeAssertMinerTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +558,7 @@
 				13B404EE1426BB1600EF02D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

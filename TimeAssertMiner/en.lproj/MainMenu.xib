@@ -1321,7 +1321,7 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">7</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{371, 339}, {486, 153}}</string>
+				<string key="NSWindowRect">{{371, 339}, {486, 147}}</string>
 				<int key="NSWTFlags">1954029568</int>
 				<string key="NSWindowTitle">TimeAssertMiner</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -1335,18 +1335,19 @@
 						<object class="NSCustomView" id="305737852">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrameSize">{486, 153}</string>
+							<string key="NSFrameSize">{486, 147}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<string key="NSReuseIdentifierKey">_NS:499</string>
 							<string key="NSClassName">NSView</string>
 						</object>
 					</object>
-					<string key="NSFrameSize">{486, 153}</string>
+					<string key="NSFrameSize">{486, 147}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView"/>
+					<reference key="NSNextKeyView" ref="305737852"/>
 					<bool key="NSViewIsLayerTreeHost">YES</bool>
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>

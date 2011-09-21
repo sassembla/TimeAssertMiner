@@ -12,7 +12,9 @@ enum LANGUAGES {
     NUM_OF_LANGUAGE  
 };
 
-#define MASTER_DELEGATE @"MASTER_DELEGATE"
-#define VIEW_CONT @"VIEW_CONT"
-#define VIEW    @"VIEW"
-#define SLIDER_CONT @"SLIDER_CONT"
+#define MASTER_DELEGATE     (@"MASTER_DELEGATE")
+#define VIEW_CONT           (@"VIEW_CONT")
+#define VIEW                (@"VIEW")
+#define SLIDER_CONT         (@"SLIDER_CONT")
+#define POINTEDWINDW_CONT   (@"POINTEDWINDW_CONT")
+#define TABVIEW             (@"TABVIEW")

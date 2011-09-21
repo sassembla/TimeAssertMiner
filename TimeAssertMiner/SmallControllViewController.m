@@ -35,19 +35,16 @@ int currentLanguage = 0;
 - (void) loadView {
     [super loadView];
     languageCell.title = [languageDict valueForKey:[NSString stringWithFormat:@"%d", currentLanguage]];
+    [tabViewIntObj setUp];
 }
 
 - (void) receiver:(NSNotification * )notif {
     NSString * exec = [messenger getExecFromNortification:notif];
+    NSDictionary * dict = [messenger getTagValueDictionaryFromNotification:notif];
     
+   
     if ([exec isEqualToString:@"pasteToBoard"]) {
         
-        [messenger callMyself:@"getModeThenPaste",nil];
-    }
-    
-    
-    
-    if ([exec isEqualToString:@"getModeThenPaste"]) {
         [justCopiedText setTextColor:[NSColor colorWithSRGBRed:0.25 green:0.25 blue:0.25 alpha:0.8]];
         
         NSString * message = @"";//空欄
@@ -67,7 +64,7 @@ int currentLanguage = 0;
     if ([exec isEqualToString:@"fade"]) {
         [justCopiedText setTextColor:[NSColor colorWithSRGBRed:0.25 green:0.25 blue:0.25 alpha:1.0]];
         [messenger callMyself:@"fadeDuration",
-         [messenger withDelay:0.7],
+         [messenger withDelay:0.9],
          nil];
     }
     
@@ -100,6 +97,27 @@ int currentLanguage = 0;
     
     if ([exec isEqualToString:@"languageChanged"]) {
         [self timeAssertText:@"" withLimit:@"" withMessage:@"" byType:currentLanguage];
+    }
+    
+    if ([exec isEqualToString:@"lineStarted"] || [exec isEqualToString:@"lineDragged"]) {
+        [messenger callParent:@"lineStarted", 
+         [messenger tag:@"startPoint" val:[dict valueForKey:@"startPoint"]],
+         [messenger tag:@"endPoint" val:[dict valueForKey:@"endPoint"]],
+         nil];
+    }
+   
+    if ([exec isEqualToString:@"lineDropped"]) {
+        
+        NSString * message = @"";//空欄
+        NSString * pasteMessage = [self timeAssertText:[TimeMine localizedTime] withLimit:nowTimeDistance.title withMessage:message byType:currentLanguage];
+        
+        [messenger call:VIEW withExec:@"drop",
+         [messenger tag:@"message" val:pasteMessage],
+         nil];
+        
+        
+        [messenger callParent:@"lineDropped",
+         nil];
     }
 }
 
@@ -144,10 +162,9 @@ int currentLanguage = 0;
     }
 }
 
-
-- (IBAction)clockIndicatorChanged:(id)sender {
-    NSSlider * senderNSSlider = sender;
-    int timeCount = [senderNSSlider intValue];
+int timeCount = 0;
+- (IBAction)timeDistanceUpdate:(id)sender {
+    timeCount = (timeCount+1)%7;
     
     int time = 0;
     
@@ -182,16 +199,15 @@ int currentLanguage = 0;
         
         case 6:
             time = 60*60*24*10;//10d
+            
             break;        
         
         default:
             break;
     }
     
-    [TimeText setTitle:[NSString stringWithFormat:@"%d, %dmin, %dhour, %dday", time, time/60, time/(60*60), time/(60*60*24)]];
+    [timeDistanceButton setTitle:[NSString stringWithFormat:@"%d, %dmin, %dhour, %dday", time, time/60, time/(60*60), time/(60*60*24)]];
     [nowTimeDistance setIntValue:time];
-    
-    [messenger callMyself:@"getModeThenPaste", nil];
 }
 
 - (IBAction)languageTapped:(id)sender {
@@ -199,6 +215,13 @@ int currentLanguage = 0;
     
     languageCell.title = [languageDict valueForKey:[NSString stringWithFormat:@"%d", currentLanguage]];
     [messenger callMyself:@"languageChanged", nil];
+}
+
+
+
+
+- (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem {
+    [TimeMine setTimeMineLocalizedFormat:@"11/09/22 02:00:44" withLimitSec:0 withComment:@"選択が発生したらサーチへ"];//DB4C51C7-629A-4761-B634-FBF214697618
 }
 
 
