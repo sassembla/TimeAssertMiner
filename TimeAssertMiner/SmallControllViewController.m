@@ -27,6 +27,7 @@ int currentLanguage = 0;
         languageDict = [[NSDictionary alloc]initWithObjectsAndKeys:
                         @"Objective-C", [NSString stringWithFormat:@"%d", OBJECTIVE_C],
                         @"GWT", [NSString stringWithFormat:@"%d", GWT],
+                        @"TimeStamp", [NSString stringWithFormat:@"%d", JUSTIME],
                         nil];
     }
     
@@ -34,6 +35,21 @@ int currentLanguage = 0;
 }
 - (void) loadView {
     [super loadView];
+    
+    originalNowTimeDescriptionColor = nowTimeDescription.textColor;
+    originalNowTimeDescriptionFont = nowTimeDescription.font;
+    originalNowTimeDescriptionFrame = [nowTimeDescription controlView].frame;
+    
+    
+    originalNowTimeDistanceColor = nowTimeDistance.textColor;
+    originalNowTimeDistanceFont = nowTimeDistance.font;
+    originalNowTimeDistanceFrame = [nowTimeDistance controlView].frame;
+    
+    
+    originalTimeAssertTextBaseColor = timeAssertTextBase.textColor;
+    originalTimeAssertTextBaseFont = timeAssertTextBase.font;
+    originalTimeAssertTextBaseFrame = [timeAssertTextBase controlView].frame;
+    
     languageCell.title = [languageDict valueForKey:[NSString stringWithFormat:@"%d", currentLanguage]];
     [tabViewIntObj setUp];
 }
@@ -123,8 +139,12 @@ int currentLanguage = 0;
 
 
 - (NSString * ) timeAssertText:(NSString * )time withLimit:(NSString * )timeLimitStr withMessage:(NSString * )message byType:(int)currentMode {
+    
+    [self resetInterfaceCondition];
+    
     switch (currentMode) {
-        case MODE_ObjectiveC:{
+        case OBJECTIVE_C:{
+            
             [[nowTimeDescription controlView] setFrame:CGRectMake(187, 48, [[nowTimeDescription controlView] frame].size.width, [[nowTimeDescription controlView] frame].size.height)];
             [[nowTimeDistance controlView] setFrame:CGRectMake(185, 34, [[nowTimeDistance controlView] frame].size.width, [[nowTimeDistance controlView] frame].size.height)];
             
@@ -137,7 +157,7 @@ int currentLanguage = 0;
                     [MessengerIDGenerator getMID]];
         }
             
-        case MODE_GWT:{
+        case GWT:{
             [[nowTimeDescription controlView] setFrame:CGRectMake(50, 48, [[nowTimeDescription controlView] frame].size.width, [[nowTimeDescription controlView] frame].size.height)];
             [[nowTimeDistance controlView] setFrame:CGRectMake(50, 34, [[nowTimeDistance controlView] frame].size.width, [[nowTimeDistance controlView] frame].size.height)];
             
@@ -156,15 +176,50 @@ int currentLanguage = 0;
                     message, 
                     [MessengerIDGenerator getMID]];
         }
+        case JUSTIME:{
+            
+            [nowTimeDistance setTextColor:[NSColor clearColor]];
+            [timeAssertTextBase setTextColor:[NSColor clearColor]];
+            
+            NSView * currentTabView = [nowTimeDescription controlView].superview;
+            [[nowTimeDescription controlView]setFrame:CGRectMake(currentTabView.frame.origin.x, currentTabView.frame.origin.y-currentTabView.frame.size.height/2-6, currentTabView.frame.size.width, currentTabView.frame.size.height)];
+            [nowTimeDescription setFont:[NSFont fontWithName:nowTimeDescription.font.fontName size:34]];
+            
+            return time;
+        }
             
         default:
             return nil;
     }
 }
 
+
+
+- (void) resetInterfaceCondition {
+    
+    [nowTimeDistance setTextColor:[NSColor blackColor]];
+    [nowTimeDescription setTextColor:originalNowTimeDescriptionColor];
+    [nowTimeDescription setFont:originalNowTimeDescriptionFont];
+    [[nowTimeDescription controlView] setFrame:originalNowTimeDescriptionFrame];
+
+    
+    [nowTimeDistance setTextColor:[NSColor blackColor]];
+    [nowTimeDistance setTextColor:originalNowTimeDistanceColor];    
+    [nowTimeDistance setFont:originalNowTimeDistanceFont];
+    [[nowTimeDistance controlView] setFrame:originalNowTimeDistanceFrame];
+    
+    
+    [timeAssertTextBase setTextColor:[NSColor blackColor]];
+    [timeAssertTextBase setTextColor:originalTimeAssertTextBaseColor];
+    [timeAssertTextBase setFont:originalTimeAssertTextBaseFont];
+    [[timeAssertTextBase controlView] setFrame:originalTimeAssertTextBaseFrame];
+    
+}
+
+
 int timeCount = 0;
 - (IBAction)timeDistanceUpdate:(id)sender {
-    timeCount = (timeCount+1)%7;
+    timeCount = (timeCount+1)%NUM_OF_TIMES;
     
     int time = 0;
     
@@ -174,31 +229,31 @@ int timeCount = 0;
     */
     switch (timeCount) {
         case 0:
-            time = 0;
+            time = T0_0;
             break;
         
         case 1:
-            time = 60*30;//30m
+            time = T1_30;//60*30;//30m
             break;
             
         case 2:
-            time = 60*60;//1h
+            time = T2_1H;//60*60;//1h
             break;
                         
         case 3:
-            time = 60*60*4;//4h
+            time = T3_4H;//60*60*4;//4h
             break;
                         
         case 4:
-            time = 60*60*24;//1d
+            time = T4_1D;//60*60*24;//1d
             break;
             
         case 5: 
-            time = 60*60*24*2;//2d
+            time = T5_2D;//60*60*24*2;//2d
             break; 
         
         case 6:
-            time = 60*60*24*10;//10d
+            time = T6_10D;//60*60*24*10;//10d
             
             break;        
         
