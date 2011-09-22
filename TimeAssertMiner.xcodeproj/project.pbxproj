@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		139290DA142AFA8A00019404 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 139290D9142AFA8A00019404 /* icon.png */; };
+		139290DC142B006F00019404 /* TimeAssertMinerIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 139290DB142B006F00019404 /* TimeAssertMinerIcon.icns */; };
 		13B404BB1426BB1500EF02D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B404BA1426BB1500EF02D2 /* Cocoa.framework */; };
 		13B404C51426BB1500EF02D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13B404C31426BB1500EF02D2 /* InfoPlist.strings */; };
 		13B404C71426BB1500EF02D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B404C61426BB1500EF02D2 /* main.m */; };
@@ -26,7 +28,6 @@
 		13B4058E14271BD900EF02D2 /* TouchDetectionViewInterfaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B4058D14271BD900EF02D2 /* TouchDetectionViewInterfaceObject.m */; };
 		13ED19E014296EFF006B5B85 /* PointedWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13ED19DF14296EFF006B5B85 /* PointedWindowController.m */; };
 		13ED19E3142970F1006B5B85 /* PointedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13ED19E2142970F1006B5B85 /* PointedView.m */; };
-		13ED19EB14299AC6006B5B85 /* scr3.png in Resources */ = {isa = PBXBuildFile; fileRef = 13ED19EA14299AC6006B5B85 /* scr3.png */; };
 		13ED1A00142A4BE1006B5B85 /* TabViewInterfaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 13ED19FF142A4BE1006B5B85 /* TabViewInterfaceObject.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		139290D9142AFA8A00019404 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		139290DB142B006F00019404 /* TimeAssertMinerIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TimeAssertMinerIcon.icns; path = TimeAssertMinerTests/TimeAssertMinerIcon.icns; sourceTree = SOURCE_ROOT; };
 		13B404B61426BB1500EF02D2 /* TimeAssertMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAssertMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B404BA1426BB1500EF02D2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		13B404BD1426BB1500EF02D2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -76,7 +79,6 @@
 		13ED19DF14296EFF006B5B85 /* PointedWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointedWindowController.m; sourceTree = "<group>"; };
 		13ED19E1142970F1006B5B85 /* PointedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointedView.h; sourceTree = "<group>"; };
 		13ED19E2142970F1006B5B85 /* PointedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointedView.m; sourceTree = "<group>"; };
-		13ED19EA14299AC6006B5B85 /* scr3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scr3.png; sourceTree = "<group>"; };
 		13ED19FE142A4BE1006B5B85 /* TabViewInterfaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewInterfaceObject.h; sourceTree = "<group>"; };
 		13ED19FF142A4BE1006B5B85 /* TabViewInterfaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewInterfaceObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		139290D8142AFA7400019404 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				139290D9142AFA8A00019404 /* icon.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		13B404AB1426BB1500EF02D2 = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +154,7 @@
 		13B404C01426BB1500EF02D2 /* TimeAssertMiner */ = {
 			isa = PBXGroup;
 			children = (
-				13ED19EA14299AC6006B5B85 /* scr3.png */,
+				139290D8142AFA7400019404 /* Resource */,
 				13ED19F8142A10C2006B5B85 /* TargetPointWindowControl */,
 				13B4058F14271D6700EF02D2 /* SmallControllView */,
 				13B404EF1426BB4400EF02D2 /* Support */,
@@ -160,6 +170,7 @@
 		13B404C11426BB1500EF02D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				139290DB142B006F00019404 /* TimeAssertMinerIcon.icns */,
 				13B404C21426BB1500EF02D2 /* TimeAssertMiner-Info.plist */,
 				13B404C31426BB1500EF02D2 /* InfoPlist.strings */,
 				13B404C61426BB1500EF02D2 /* main.m */,
@@ -332,7 +343,8 @@
 				13B404CB1426BB1500EF02D2 /* Credits.rtf in Resources */,
 				13B404D11426BB1600EF02D2 /* MainMenu.xib in Resources */,
 				13B4052E1426F3D400EF02D2 /* SmallControllViewController.xib in Resources */,
-				13ED19EB14299AC6006B5B85 /* scr3.png in Resources */,
+				139290DA142AFA8A00019404 /* icon.png in Resources */,
+				139290DC142B006F00019404 /* TimeAssertMinerIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -215,7 +215,6 @@ bWVudDpAIiIKXTs</string>
 									<nil key="NSNextResponder"/>
 									<int key="NSvFlags">256</int>
 									<string key="NSFrame">{{10, 33}, {370, 78}}</string>
-									<reference key="NSNextKeyView" ref="63019640"/>
 									<string key="NSReuseIdentifierKey">_NS:473</string>
 								</object>
 								<string key="NSLabel">Search</string>
@@ -292,7 +291,7 @@ bWVudDpAIiIKXTs</string>
 							<int key="NSCellFlags2">33554432</int>
 							<object class="NSCustomResource" key="NSContents">
 								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">scr3</string>
+								<string key="NSResourceName">icon</string>
 							</object>
 							<string key="NSCellIdentifier">_NS:1658</string>
 							<int key="NSAlign">0</int>
@@ -443,9 +442,9 @@ bWVudDpAIiIKXTs</string>
 							<reference ref="246705303"/>
 							<reference ref="63019640"/>
 							<reference ref="864861271"/>
-							<reference ref="515450567"/>
 							<reference ref="39062698"/>
 							<reference ref="811978960"/>
+							<reference ref="515450567"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -544,6 +543,7 @@ ICAgICAgICAgICAgd2l0aENvbW1lbnQ6QCIiCl07A</string>
 							<reference ref="457623148"/>
 						</array>
 						<reference key="parent" ref="1005"/>
+						<string key="objectName">Image View</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">98</int>
@@ -651,7 +651,6 @@ ICAgICAgICAgICAgd2l0aENvbW1lbnQ6QCIiCl07A</string>
 						<string key="tabViewIntObj">TabViewInterfaceObject</string>
 						<string key="timeAssertTextBase">NSTextFieldCell</string>
 						<string key="timeDistanceButton">NSButtonCell</string>
-						<string key="touch">TouchDetectionViewInterfaceObject</string>
 						<string key="touchView">TouchDetectionViewInterfaceObject</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -682,10 +681,6 @@ ICAgICAgICAgICAgd2l0aENvbW1lbnQ6QCIiCl07A</string>
 						<object class="IBToOneOutletInfo" key="timeDistanceButton">
 							<string key="name">timeDistanceButton</string>
 							<string key="candidateClassName">NSButtonCell</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="touch">
-							<string key="name">touch</string>
-							<string key="candidateClassName">TouchDetectionViewInterfaceObject</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="touchView">
 							<string key="name">touchView</string>
@@ -720,7 +715,7 @@ ICAgICAgICAgICAgd2l0aENvbW1lbnQ6QCIiCl07A</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">scr3</string>
+			<string key="NS.key.0">icon</string>
 			<string key="NS.object.0">{258, 320}</string>
 		</object>
 	</data>
